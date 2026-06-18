@@ -1,0 +1,31 @@
+<build>
+2 <plugins>
+3 <plugin>
+4 <groupId>org.apache.maven.plugins</groupId>
+5 <artifactId>maven-resources-plugin</artifactId>
+6 <version>3.2.0</version>
+7 <executions>
+8 <execution>
+9 <phase>prepare-package</phase> <!-- Before packaging -->
+10 <goals>
+11 <goal>copy-resources</goal>
+12 </goals>
+13 <configuration>
+14 <outputDirectory>${project.basedir}/docs</outputDirectory> <!-- Deploy to /docs
+folder -->
+15 <resources>
+16 <resource>
+17 <directory>src/main/resources</directory>
+<resource>
+17 <directory>src/main/resources</directory>
+18 <includes>
+19 <include>**/*</include>
+20 </includes>
+21 </resource>
+22 </resources>
+23 </configuration>
+24 </execution>
+25 </executions>
+26 </plugin>
+27 </plugins>
+28 </build>
